@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+.vercel
+yarn.lock
+packages/web/yarn.lock
+packages/web/api/.DS_Store
