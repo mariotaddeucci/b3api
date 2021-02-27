@@ -1,50 +1,22 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "dev": "cd ../.. && vercel dev",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "bulma": "^0.9.2",
-    "core-js": "^3.6.5",
-    "github-markdown-css": "^4.0.0",
-    "markdown-it": "^12.0.4",
-    "table-scraper": "^1.0.3",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "my-app",
+    "scripts": {
+        "dev": "cd ../.. && vercel dev",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "start": "nuxt start"
     },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "dependencies": {
+        "@nuxtjs/axios": "^5.13.1",
+        "@nuxtjs/robots": "^2.4.2",
+        "@nuxtjs/sitemap": "^2.4.0",
+        "bulma": "^0.9.2",
+        "github-markdown-css": "^4.0.0",
+        "markdown-it": "^12.0.4",
+        "nuxt": "^2.15.2",
+        "table-scraper": "^1.0.3"
     },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "devDependencies": {
+        "@nuxtjs/google-analytics": "^2.4.0"
+    }
 }

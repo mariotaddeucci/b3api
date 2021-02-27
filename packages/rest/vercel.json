@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/api/stocks/:tickers",
-            "destination": "/api/stocks"
+            "source": "/api/assets/:tickers",
+            "destination": "/api/assets"
         }
     ]
 }

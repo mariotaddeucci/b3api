@@ -17,7 +17,7 @@ export default async (req, res) => {
     if (tickers) {
 
         // Formated data
-        const { data } = await axios.get(`${req.protocol}://${process.env.VERCEL_URL}/api/stocks`);
+        const { data } = await axios.get(`${req.protocol}://${process.env.VERCEL_URL}/api/assets`);
         // Get specified fields
         const filters = (Array.isArray(tickers) ? tickers : [tickers]).map(tk => tk.toUpperCase().trim());
         const filteredData = data.filter(tk => filters.includes(tk.ticker));
