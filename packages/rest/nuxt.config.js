@@ -12,8 +12,7 @@ export default {
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/sitemap',
-        '@nuxtjs/robots',
-        'nuxt-custom-headers'
+        '@nuxtjs/robots'
     ],
     css: [
         { src: 'bulma/css/bulma.min.css' },

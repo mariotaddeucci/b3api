@@ -56,7 +56,7 @@
             <a href="https://github.com/mariotaddeucci/b3api">Github</a>,
             <a href="https://www.npmjs.com/package/b3api">NPM</a>
             e
-            <a href="https://www.npmjs.com/package/b3api">PyPi</a>.
+            <a href="https://pypi.org/project/b3api/">PyPi</a>.
           </p>
         </div>
       </div>
@@ -87,5 +87,8 @@
   font-weight: 500;
   font-size: 2em;
   color: #444;
+}
+.navbar-brand{
+  padding-left: 1em;
 }
 </style>
