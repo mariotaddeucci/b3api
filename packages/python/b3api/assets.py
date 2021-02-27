@@ -5,12 +5,12 @@ def get_endpoint(endpoint):
     return '{}{}/'.format(REST_API, endpoint.strip('/'))
 
 def get(ticker):
-    url = get_endpoint('stocks') + ticker
+    url = get_endpoint('assets') + ticker
     data = requests.get(url).json()
     return data
 
 def getAll(tickers=[]):
-    url = get_endpoint('stocks')
+    url = get_endpoint('assets')
     params = {'tickers': tickers } if tickers else ''
     data = requests.get(url, params=params).json()
     return data
