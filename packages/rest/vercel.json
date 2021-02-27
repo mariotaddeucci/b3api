@@ -7,6 +7,10 @@
     ],
     "builds": [
         {
+            "src": "api/**/*.js",
+            "use": "@now/node"
+        },
+        {
             "src": "nuxt.config.js",
             "use": "@nuxtjs/vercel-builder",
             "config": {}
