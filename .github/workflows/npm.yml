@@ -2,7 +2,7 @@ name: Publish package on NPM
 on:
   push:
     paths:
-      - 'packages/node/**.js'
+    - 'packages/node/**.js'
     branches:
       - master
 
