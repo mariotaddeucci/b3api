@@ -1,22 +1,25 @@
 {
-    "name": "my-app",
-    "scripts": {
-        "dev": "cd ../.. && vercel dev",
-        "build": "nuxt build",
-        "generate": "nuxt generate",
-        "start": "nuxt start"
-    },
-    "dependencies": {
-        "@nuxtjs/axios": "^5.13.1",
-        "@nuxtjs/robots": "^2.4.2",
-        "@nuxtjs/sitemap": "^2.4.0",
-        "bulma": "^0.9.2",
-        "github-markdown-css": "^4.0.0",
-        "markdown-it": "^12.0.4",
-        "nuxt": "^2.15.2",
-        "table-scraper": "^1.0.3"
-    },
-    "devDependencies": {
-        "@nuxtjs/google-analytics": "^2.4.0"
-    }
+  "name": "rest",
+  "license": "MIT",
+  "scripts": {
+    "vercel": "cd ../.. && vercel dev",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "axios": "^0.21.1",
+    "bulma": "^0.9.2",
+    "github-markdown-css": "^4.0.0",
+    "markdown-it": "^12.0.4",
+    "nuxt": "^2.15.2",
+    "table-scraper": "^1.0.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0"
+  }
 }

@@ -17,6 +17,6 @@ export default {
     )}</article>`;
 
     return { content };
-  },
+  }
 };
 </script>
