@@ -1,4 +1,4 @@
-name: Pypi
+name: PyPi
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  publish:
+  PyPi:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
     - name: Deploying to pypi
       run: |
         pip install -r requirements.txt
-        pip install twine
+        pip install twine setuptools wheel
         python setup.py sdist
         python setup.py bdist_wheel
         twine upload dist/* -u taddeucci -p ${{ secrets.PYPI_TOKEN }}
