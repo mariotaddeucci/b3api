@@ -88,4 +88,7 @@
   font-size: 2em;
   color: #444;
 }
+.navbar-brand{
+  padding-left: 1em;
+}
 </style>
