@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "nuxt.config.js",
+            "use": "@nuxtjs/now-builder",
+            "config": {}
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/api/assets/:tickers",
+            "destination": "/api/assets"
+        }
+    ]
+}
