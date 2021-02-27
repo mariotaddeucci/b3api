@@ -39,6 +39,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+node_modules_dev/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -242,3 +243,5 @@ dmypy.json
 .DS_Store
 
 
+packages/rest/.yarnclean
+packages/rest/node_modules
