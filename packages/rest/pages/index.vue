@@ -17,7 +17,9 @@
           <NuxtLink class="button is-medium is-info is-outlined" to="/pkg/rest"
             >Rest API</NuxtLink
           >
-          <NuxtLink class="button is-medium is-info is-outlined" to="/pkg/python"
+          <NuxtLink
+            class="button is-medium is-info is-outlined"
+            to="/pkg/python"
             >Python</NuxtLink
           >
           <NuxtLink class="button is-medium is-info is-outlined" to="/pkg/node"
@@ -33,3 +35,11 @@ img {
   filter: grayscale(100%);
 }
 </style>
+<script>
+export default {
+  name: "Home",
+  httpHeaders: () => ({
+    "Cache-Control": `max-age=0, s-maxage=10080, stale-while-revalidate`,
+  }),
+};
+</script>
