@@ -1,5 +1,6 @@
 {
   "name": "rest",
+  "license": "MIT",
   "scripts": {
     "vercel": "cd ../.. && vercel dev",
     "dev": "nuxt",
