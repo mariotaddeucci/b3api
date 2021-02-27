@@ -1,8 +1,5 @@
 <template>
-  <div class="container">
-    <h1>This is an about page</h1>
-    <div v-html="content"></div>
-  </div>
+  <div class="container" v-html="content"></div>
 </template>
 <script>
 import MarkdownIt from "markdown-it";
@@ -27,7 +24,7 @@ export default {
     async getMarkdown() {
       const url = `https://raw.githubusercontent.com/mariotaddeucci/b3api/master/packages/${this.packageId}/README.md`;
       const { data } = await axios.get(url);
-      this.content = `<article class="markdown-body">${md.render(
+      this.content = `<article class="markdown-body" style="display:inline-grid;" >${md.render(
         data
       )}</article>`;
     },

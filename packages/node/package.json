@@ -1,0 +1,22 @@
+{
+  "name": "b3api",
+  "version": "0.0.1",
+  "description": "Uma biblioteca simples para consumir dados de ativos da bolsa de valores brasileira, B3.",
+  "main": "index.js",
+  "repository": "https://github.com/mariotaddeucci/b3api.git",
+  "keywords": [
+    "B3",
+    "acoes",
+    "stocks",
+    "bolsa",
+    "brasil",
+    "api"
+  ],
+  "author": "Mario Taddeucci",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.3"
+  },
+  "dependencies": {
+  }
+}

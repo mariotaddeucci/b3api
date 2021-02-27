@@ -5,11 +5,8 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a class="navbar-item" href="../">
-                <img
-                  src="https://raw.githubusercontent.com/BulmaTemplates/bulma-templates/master/images/bulma.png"
-                  alt="Logo"
-                />
+              <a class="navbar-item" @click="$router.push({ name: 'Home' })">
+                <i class="fa fa-chart-line"></i> B3API
               </a>
               <span class="navbar-burger burger" data-target="navbarMenu">
                 <span></span>
@@ -21,9 +18,22 @@
               <div class="navbar-end">
                 <div class="tabs is-right">
                   <ul>
-                    <li class="is-active" @click="$router.push({ name: 'Home', params: {title: 'test title' }})"><a>Home</a></li>
-                    <li v-for="pkg in packages" :key="pkg" >
-                      <a @click="$router.push({ name: 'package', params: {packageId: pkg.toLowerCase() }})">{{pkg}}</a>
+                    <li
+                      class="is-active"
+                      @click="$router.push({ name: 'Home' })"
+                    >
+                      <a>Home</a>
+                    </li>
+                    <li v-for="pkg in packages" :key="pkg">
+                      <a
+                        @click="
+                          $router.push({
+                            name: 'package',
+                            params: { packageId: pkg.toLowerCase() },
+                          })
+                        "
+                        >{{ pkg }}</a
+                      >
                     </li>
                   </ul>
                   <a
@@ -67,12 +77,15 @@
   margin-right: calc(-0.5em - 1px);
   font-size: 22px;
 }
+.hero-body {
+  padding: 1rem 1.5rem;
+}
 </style>
 
 <script>
 export default {
-  data:()=>({
-    packages:['Web','Rest', 'Python', 'Node']
-  })
-}
+  data: () => ({
+    packages: ["Rest", "Python", "Node"],
+  }),
+};
 </script>

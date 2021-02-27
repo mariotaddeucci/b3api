@@ -1,5 +1,5 @@
-# B3Api 💰 - REST API
-Essa é uma API gratuita e não oficial para buscar de ativos listados na bolsa de valores B3.
+# B3Api 💰 - Nodejs
+Essa é uma biblioteca gratuita e não oficial para buscar de ativos listados na bolsa de valores B3.
 
 ### Objeto Asset:
 - **ticker**: o código da ação referente ao título em questão.
@@ -20,25 +20,19 @@ Essa é uma API gratuita e não oficial para buscar de ativos listados na bolsa 
 - **closeyest**: Preço de fechamento do dia anterior.
 - **shares**: O número de ações em circulação.
 
-## Interface Rest API
-A interface via rest api está disponivel em: `https://b3api.vercel.app/api`
+## Instalação:
 
-## Lista de ativos
+    npm install b3api
 
-### Requisição
+## Utilizando a biblioteca em código 
 
-`GET /Assets/`
+### Lista de ativos
 
-    curl -i -H 'Accept: application/json' https://b3api.vercel.app/api/Assets/
+	import b3api from 'b3api'
+	data = await b3api.assets.getAll()
+	console.log(data)
 
-### Resposta
-
-    HTTP/1.1 200 OK
-    Date: Thu, 25 Feb 2021 20:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 421223
+#### Resultado
 
     [
 	    {
@@ -66,24 +60,13 @@ A interface via rest api está disponivel em: `https://b3api.vercel.app/api`
 		...
 	]
 	
-## Lista filtrada de ativos
+### Lista filtrada de ativos
 
-### Requisição
+	import b3api from 'b3api'
+	data = await b3api.assets.getAll(['ITSA4', 'BBDC4'])
+	console.log(data)
 
-`GET /Assets/?tickers=:TICKER1&tickers=:TICKER2`
-
-    curl -i -H 'Accept: application/json' https://b3api.vercel.app/api/Assets?tickers=ITSA4&tickers=BBDC4
-
-### Resposta
-
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 601
-
+#### Resultado
     [
 	    {
 	        "price": 23.44,
@@ -125,23 +108,14 @@ A interface via rest api está disponivel em: `https://b3api.vercel.app/api`
 	    }
 	]
 
-## Buscar um ativo especifico
+### Buscar um ativo especifico
 
-### Requisição
+	import b3api from 'b3api'
+	data = await b3api.assets.get('ITSA4')
+	console.log(data)
 
-`GET /Assets/:ticker`
 
-    curl -i -H 'Accept: application/json' https://b3api.vercel.app/api/Assets/ITSA4
- 
-### Resposta
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2021 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 298
-
+#### Resultado
     {
 	    "price": 10.08,
 	    "priceopen": 10.43,
@@ -162,27 +136,6 @@ A interface via rest api está disponivel em: `https://b3api.vercel.app/api`
 	    "ticker": "ITSA4"
 	}
 
-## Buscar um ativo inválido
-
-### Requisição
-
-`GET /Assets/:ticker`
-
-    curl -i -H 'Accept: application/json' https://b3api.vercel.app/api/Assets/InvalidTicker
-
-### Resposta
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2021 12:36:30 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {
-	    "status": 404,
-	    "reason": "Not found"
-	}
 
 ## Exoneração de responsabilidade
 
