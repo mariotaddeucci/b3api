@@ -1,0 +1,29 @@
+name: Pypi
+
+on:
+  push:
+    paths:
+      - packages/python/setup.py
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        # Semantic version range syntax or exact version of a Python version
+        python-version: '3.6'
+    # You can test your matrix by printing the current Python version
+    - name: Deploying to pypi
+      run: |
+        pip install -r requirements.txt
+        pip install twine
+        python setup.py sdist
+        python setup.py bdist_wheel
+        twine upload dist/* -u taddeucci -p ${{ secrets.PYPI_TOKEN }}
+      working-directory: "packages/python"
