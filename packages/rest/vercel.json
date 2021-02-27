@@ -12,11 +12,5 @@
             "source": "/api/assets/:tickers",
             "destination": "/api/assets"
         }
-    ],
-    "routes": [
-        {
-            "src": "/api/assets",
-            "dest": "/api/assets.js"
-        }
     ]
 }
