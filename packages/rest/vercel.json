@@ -1,15 +1,13 @@
 {
-    "rewrites": [
-        {
-            "source": "/api/assets/:tickers",
-            "destination": "/api/assets"
-        }
-    ],
     "builds": [
         {
             "src": "nuxt.config.js",
             "use": "@nuxtjs/vercel-builder",
             "config": {}
+        },
+        {
+            "src": "api/**/*.js",
+            "use": "@vercel/node"
         }
     ]
 }
