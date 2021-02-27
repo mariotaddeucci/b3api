@@ -56,7 +56,7 @@
             <a href="https://github.com/mariotaddeucci/b3api">Github</a>,
             <a href="https://www.npmjs.com/package/b3api">NPM</a>
             e
-            <a href="https://www.npmjs.com/package/b3api">PyPi</a>.
+            <a href="https://pypi.org/project/b3api/">PyPi</a>.
           </p>
         </div>
       </div>

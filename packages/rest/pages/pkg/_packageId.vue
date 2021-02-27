@@ -17,9 +17,6 @@ export default {
     )}</article>`;
 
     return { content };
-  },
-  httpHeaders: () => ({
-    "Cache-Control": `max-age=0, s-maxage=2880, stale-while-revalidate`,
-  }),
+  }
 };
 </script>
