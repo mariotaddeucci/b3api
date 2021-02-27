@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='b3api',
-    version='0.0.3',
+    version='0.0.1',
     description='Uma biblioteca simples para consumir dados de ativos da bolsa de valores brasileira, B3.',
     long_description=long_description,
     long_description_content_type="text/markdown",

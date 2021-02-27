@@ -1,4 +1,4 @@
-from . import assets
+import assets
 import optparse
 import json
 
